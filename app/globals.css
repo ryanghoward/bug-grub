@@ -3,25 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: khaki;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hero-bg-image {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fninanco.com%2Fwp-content%2Fuploads%2F2015%2F12%2Finsect-meal.jpg&f=1&nofb=1&ipt=48f3794cc3ba67a7decbe00346c1efb989661f4df112d432df5fe2b09ee41eaf&ipo=images);
 }
