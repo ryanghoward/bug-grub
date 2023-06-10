@@ -20,9 +20,33 @@ const Navbar = () => {
             <button
               className='p-2 rounded-md outline-none text-2xl text-[var(--primary-color)]'
               onClick={() => setNavbar(!navbar)}
-            ></button>
+            >
+              {navbar ? <FaTimesCircle /> : <FaBars />}
+            </button>
           </div>
         </div>
+      </div>
+      <div
+        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+          navbar ? "p-12 md:p-0 block" : "hidden"
+        }`}
+      >
+        <ul className='h-screen justify-end items-center md:h-auto md:flex'>
+          <li className='text-left p-3 md:mb-4 uppercase font-bold text-2xl md:text-[18px] md:px-4 hover:text-[var(--primary-color)] cursor-pointer'>
+            <Link
+              href='https://en.wikipedia.org/wiki/Insects_as_food'
+              target='_blank'
+              onClick={() => setNavbar(!navbar)}
+            >
+              Insects as Food
+            </Link>
+          </li>
+          <li className='text-left p-3 md:mb-4 uppercase font-bold text-2xl md:text-[18px] md:px-4 hover:text-[var(--primary-color)] cursor-pointer'>
+            <Link href='/#ikea' onClick={() => setNavbar(!navbar)}>
+              Ikea&apos;s Insect Burger
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
